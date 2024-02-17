@@ -49,6 +49,30 @@ export const headTextAnimation = {
   },
 };
 
+// 1. `export const headTextAnimation = {`: This line declares a constant named `headTextAnimation` and initializes it as an object. This object will contain properties defining an animation configuration.
+
+// 2. `initial: { x: 100, opacity: 0 },`: This line defines the initial state of the animation. The text starts with an x-axis offset of 100 units (presumably pixels) and an opacity of 0 (completely transparent).
+
+// 3. `animate: { x: 0, opacity: 1 },`: This line defines the target state of the animation. It specifies that the text should animate to an x-axis offset of 0 (aligned with its original position) and an opacity of 1 (fully opaque).
+
+// 4. `transition: {`: This line begins the definition of the transition configuration for the animation.
+
+// 5. `type: "spring",`: This line specifies the type of transition as a spring-based animation. In spring animations, the element overshoots its target position and oscillates around it before settling.
+
+// 6. `damping: 5,`: This line sets the damping parameter for the spring animation. Damping controls the rate at which the spring's oscillations decrease over time, affecting the smoothness of the animation.
+
+// 7. `stiffness: 40,`: This line sets the stiffness parameter for the spring animation. Stiffness determines how quickly the spring reaches its target position, affecting the speed of the animation.
+
+// 8. `restDelta: 0.001,`: This line sets the restDelta parameter for the spring animation. Rest delta specifies the threshold distance below which the spring is considered at rest, effectively controlling the precision of the animation's endpoint.
+
+// 9. `duration: 0.3,`: This line sets the duration of the animation to 0.3 seconds. While springs are typically defined by their stiffness and damping, a duration parameter is also provided here, possibly as a fallback or to fine-tune the animation.
+
+// 10. `},`: This line closes the transition configuration object.
+
+// 11. `};`: This line closes the `headTextAnimation` object definition.
+
+// In summary, this code defines an animation configuration for animating text. The text initially starts offscreen with zero opacity, then animates to its original position with full opacity using a spring-based transition with specific parameters controlling its damping, stiffness, precision, and duration.
+
 export const headContentAnimation = {
   initial: { y: 100, opacity: 0 },
   animate: { y: 0, opacity: 1 },

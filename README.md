@@ -1,3 +1,5 @@
+# TeeViewr-3D-T-Shirt-Customizer
+
 1. install vite
    -npm create vite@latest -- --template react clien
 2. install packages
@@ -67,4 +69,17 @@ code -
 </motion.section>
 )}
 </AnimatePresence>
-# TeeViewr-3D-T-Shirt-Customizer
+
+7)now we need button which takes us customization page from homepage.
+for that we can create <CustomButton /> component
+and we can export it from index.js file to homepage
+
+-we pass some props to button
+<CustomButton
+type="filled"
+title="Customize it"
+handleClick={() => (state.intro = false)} //updating state in valtio (no react rule breaking here)
+customStyles="w-fit px-4 py-2.5 font-bold text=sm"
+/>
+
+//we have two types of buttons

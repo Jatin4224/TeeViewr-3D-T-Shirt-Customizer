@@ -7,6 +7,7 @@ import {
   slideAnimation,
 } from "../config/motion";
 import state from "../store";
+import { CustomButton } from "../components";
 
 const Home = () => {
   const snap = useSnapshot(state);
@@ -21,6 +22,31 @@ const Home = () => {
               className="w-8 h-8 object-contain"
             />
           </motion.header>
+
+          <motion.div className="home-content" {...headContainerAnimation}>
+            <motion.div {...headTextAnimation}>
+              <h1 className="head-text">
+                LET's <br className="xl:block hidden" /> DO IT.
+              </h1>
+              <motion.div
+                {...headContentAnimation}
+                className="flex flex-col gap-5"
+              >
+                <p className="max-w-md font-normal text-gray-700 text-base">
+                  Elevate your wardrobe game with our cutting-edge 3D
+                  customization tool
+                  <strong> Unleash your imagination</strong> & Design your
+                  unique shirt effortlessly!
+                </p>
+                <CustomButton
+                  type="filled"
+                  title="Customize it"
+                  handleClick={() => (state.intro = false)}
+                  customStyles="w-fit px-4 py-2.5 font-bold text=sm"
+                />
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </motion.section>
       )}
     </AnimatePresence>
