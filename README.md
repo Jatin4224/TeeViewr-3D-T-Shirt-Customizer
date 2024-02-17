@@ -83,3 +83,20 @@ customStyles="w-fit px-4 py-2.5 font-bold text=sm"
 />
 
 //we have two types of buttons
+
+8)lets create customizer
+
+-WE FIRST WRAP everything in <AnimatePresence>
+-AND inside that we check are we on a home page or customizer
+for that we have to acces state.
+
+<!-- - const snap = useSnapshot(state) -->
+
+const Customizer = () => {
+const snap = useSnapshot(state)
+return <AnimatePresence>
+{!snap.intro && (
+rest of the code we show
+)}
+</AnimatePresence>
+};
