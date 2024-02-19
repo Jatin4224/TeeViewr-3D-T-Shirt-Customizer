@@ -100,3 +100,35 @@ rest of the code we show
 )}
 </AnimatePresence>
 };
+
+9)canvas
+
+## first we import
+
+import { Canvas } from "@react-three/fiber";
+import { Environment, Center } from "@react-three/drei";
+
+now we have to use couple of three.js components inside canvas
+1)backdrop - is back yellowish colour
+2)CameraRig- for camera
+3)Shirt.jsx-actual model
+
+we runr afce in all this components for now and import all of them in index.js inside canvas folder
+
+10)now lets start building canvas first step is to wrap it inside <canvas></canvas>
+
+    <Canvas>
+      <ambientLight intensity={0.5} />//threejs
+      <Environment preset="city" />//threejs
+      <CameraRig>
+        <Backdrop />
+        <Center>
+          <Shirt />
+        </Center>
+      </CameraRig>
+    </Canvas>
+
+11)now lets turn shirt into real 3d model
+
+//3d model
+const {nodes, materials} = useGLTF={'/shirt_baked.glb'}
